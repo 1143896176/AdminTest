@@ -26,37 +26,39 @@
 				border: 1px solid red;
 			}
 			
-			.container-fluid>.row>.col-md-2>.row {
-				border: 1px solid red;
+			.logo>.row {
+				/*border: 1px solid red;*/
 				background: #367fa9;
 			}
 			
-			.container-fluid>.row>.col-md-2>.row>img {
+			.logo>.row img {
 				margin-top: 1rem;
 			}
 			
-			.container-fluid>.row>.col-md-10 {
+			.container-fluid>.row>.message {
 				background: #3c8dbc;
 			}
 			
-			.container-fluid>.row>.col-md-10 {
+			.container-fluid>.row>.message {
 				display: flex;
 				flex-flow: row nowrap;
 				justify-content: space-between;
 			}
 			
-			.col-md-10>.col-lg-2>span,
-			.col-md-10>.col-lg-4>span {
+			.message>.nav-top-left>a>span,
+			.message>.nav-top-right>a>span {
 				font-size: 20px;
 				color: #fff;
-				margin-right: 20px;
+				margin:0 10px;
+			}
+			.nav-top-left>a:hover{
+				background: #122B40;
+			}
+			.message .glyphicon {
+				top: 15px;
 			}
 			
-			.col-md-10 .glyphicon {
-				top: 10px;
-			}
-			
-			.col-md-10 .col-lg-4 {
+			.message .nav-top-right {
 				display: flex;
 				justify-content: flex-end;
 			}
@@ -78,6 +80,18 @@
 			.container>.Navigation-col>li {
 				list-style: none;
 			}
+			.user>a{
+				display: inline-block;
+				display:flex;
+				flex-flow:row nowrap;
+				margin:0 10px;
+				line-height:33px;
+				color: white;
+				text-decoration: none;
+			}
+			.user>a>.portrait{
+				margin-right: 5px;
+			}
 		</style>
 	</head>
 
@@ -87,30 +101,43 @@
 
 			<div class="row">
 				<!--logo部分-->
-				<div class="col-md-2 col-sm-12">
+				<div class="logo col-md-2 col-sm-12">
 					<div class="row" style="height: 100px;">
 						<img class="img-responsive center-block" alt="logo" src="img/left_logo.png" />
 					</div>
 				</div>
 				<!--logo部分结束-->
 				<!--消息提示部分-->
-				<div class="col-md-10" style="height: 50px;border-bottom: 1px solid #222222;">
-					<div class="col-lg-2 col-md-3 col-xs-1">
-						<span class="glyphicon glyphicon-align-justify" style="float:left"></span>
+				<div class=" message col-md-10" style="height: 50px;border-bottom: 1px solid #222222;">
+					<div class="nav-top-left col-lg-2 col-md-3 col-xs-1">
+						<a href="javascript:void(0)"><span class="glyphicon glyphicon-align-justify" ></span></a>
+						<!--<span class="glyphicon glyphicon-align-justify" style="float:left"></span>-->
 					</div>
-					<div class="col-lg-4 col-md-6 col-xs-11">
-						<span class="glyphicon glyphicon-envelope "><i class="bg-primary">3</i></span>
-						<span class="glyphicon glyphicon-bell"><i class="bg-success">1</i></span>
-						<span class="glyphicon glyphicon-flag"><i class="bg-warning">2</i></span>
+					<div class="nav-top-right col-lg-5 col-md-6 col-xs-11">
+						<a href="javascript:void(0)"><span class="glyphicon glyphicon-envelope "><i class="bg-primary">3</i></span></a>
+						<a href="javascript:void(0)"><span class="glyphicon glyphicon-bell"><i class="bg-success label-success">1</i></span></a>
+						<a href="javascript:void(0)"><span class="glyphicon glyphicon-flag"><i class="bg-warning label-warning">2</i></span></a>
+						<div class="user" style="height: 50px;margin-top: 10px;">
+							<a href="javascript:void(0)"><img class="portrait img-circle " src="img/财神@2x.png" height="30 "width="30">
+							<span class="name visible-lg visible-md " style="display:block">
+								后台管理员 
+							</span></a>
+							
+							
+						</div>
+						<a href="javascript:void(0)"><span class="glyphicon glyphicon-cog"></span></a>
+						<!--<span class="glyphicon glyphicon-envelope "><i class="bg-primary">3</i></span>
+						<span class="glyphicon glyphicon-bell"><i class="bg-success label-success">1</i></span>
+						<span class="glyphicon glyphicon-flag"><i class="bg-warning label-warning">2</i></span>-->
 					</div>
 
 				</div>
 				<!--消息提示部分结束-->
-				<div class="col-md-10 " style="height: 50px; "></div>
+				<div class="message col-md-10 " style="height: 50px; "></div>
 			</div>
 			<div class="row">
 				<!--左侧导航条-->
-				<div class=" col-lg-2 visible-lg">
+				<div class=" left-nav col-lg-2 col-md-2 visible-lg visible-md">
 					<ul class="nav nav-tabs nav-stacked ">
 						<li>
 							<a href='#'>Another Link 1</a>
@@ -134,17 +161,17 @@
 				</div>
 				<!--左侧导航条结束-->
 				<!--右侧内容-->
-				<div class=" col-lg-10 col-md-12  " style="background:#000000;height: 100px;">
+				<div class="right-warp col-lg-10 col-md-10  " style="background:#000000;height: 100px;">
 
 				</div>
 			</div>
 
 		</div>
-		<script src="js/bootstrap.min.js " type="text/javascript " charset="utf-8 "></script>
+		<!--<script src="js/bootstrap.min.js " type="text/javascript " charset="utf-8 "></script>
 		<script src="js/bootstrap.js " type="text/javascript ">
 		</script>
 		<script src="js/npm.js " type="text/javascript ">
-		</script>
+		</script>-->
 	</body>
 
 </html>
