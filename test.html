@@ -12,7 +12,20 @@
 		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
-
+        <style type="text/css">
+        	.nav-top-right>a>.warp{
+        		position: absolute;
+        		z-index: 1;
+        		color:#FFF;
+        		right: 0px;
+        	}
+        	.nav-top-right>a{
+        		position: relative;
+        	}
+        	.nav-top-right>a>.warp>li{
+        		list-style: none;
+        	}
+        </style>
 	</head>
 
 	<body>
@@ -39,6 +52,12 @@
 							<span class="glyphicon glyphicon-envelope ">
 							    <i class="bg-primary">3</i>
 						    </span>
+						    <ul class="warp">
+						    	<p>你有4条信息</p>
+						    	<li>1222222461165</li>
+						    	<li>2</li>
+						    	<p></p>
+						    </ul>
 						</a>
 						<a href="javascript:void(0)">
 							<span class="glyphicon glyphicon-bell">
