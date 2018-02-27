@@ -34,30 +34,32 @@ html {
 	justify-content: space-between;
 }
 
-.message>.nav-top-left>a>span,
-.message>.nav-top-right>a>span {
+.message>.nav-top-left>li>a>span,
+.message>.nav-top-right>li>a>span {
 	font-size: 20px;
 	color: #fff;
 	margin: 0 10px;
 }
 
-.nav-top-left>a {
+.nav-top-left>li>a ,.nav-top-right>li>a{
 	display: inline-block;
 	height: 50px;
 }
 
-.nav-top-left>a:hover {
+.nav-top-left>li>a:hover {
 	background: #367fa9;
 }
 
-.nav-top-right>a:hover {
+.nav-top-right>li>a:hover {
 	background:#367fa9;
 }
 
-.message .glyphicon {
+.message>.nav-top-right>li>a>.glyphicon {
 	top: 15px;
 }
-
+.message>.nav-top-left>li>a>.glyphicon {
+	top: 15px;
+}
 .message .nav-top-right {
 	display: flex;
 	justify-content: flex-end;
@@ -93,4 +95,12 @@ html {
 
 .user>a>.portrait {
 	margin-right: 5px;
+}
+.header-img{
+	width: 25px;
+	height: 25px;
+	background: #fff;
+}
+li{
+	list-style: none;
 }

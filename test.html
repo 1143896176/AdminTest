@@ -12,20 +12,55 @@
 		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
-        <style type="text/css">
-        	.nav-top-right>a>.warp{
-        		position: absolute;
-        		z-index: 1;
-        		color:#FFF;
-        		right: 0px;
-        	}
-        	.nav-top-right>a{
-        		position: relative;
-        	}
-        	.nav-top-right>a>.warp>li{
-        		list-style: none;
-        	}
-        </style>
+		<style type="text/css">
+			.nav-top-right>li>.warp {
+				width: 280px;
+				position: absolute;
+				z-index: 1;
+				/*color: #FFF;*/
+				right: 0px;
+				background: whitesmoke;
+			}
+			
+			.nav-top-right>li {
+				position: relative;
+			}
+			
+			.warp>.header,
+			.warp>.footer {
+				height: 30px;
+				color: #000000;
+				line-height: 30px;
+				text-align: center;
+			}
+			
+			.warp>li:nth-child(2) {
+				height: 250px;
+				overflow-y: scroll;
+			}
+			
+			.menu>li {
+				display: flex;
+				flex-flow: row nowrap;
+			}
+			
+			.menu>li>.menu-right {
+				font-size: 10px;
+			}
+			.setting-menu{
+				position:absolute;
+				right: 0px;
+				z-index: 1;
+				display: flex;
+				flex-flow: row nowrap;
+				
+				justify-content: space-between;
+			}
+			.setting-menu>li{
+				text-align: center;
+				width: 100%;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -43,41 +78,180 @@
 				<!--消息提示部分-->
 				<div class=" message col-md-10" style="height: 50px;border-bottom: 1px solid #222222;">
 					<div class="nav-top-left col-lg-2 col-md-3 col-xs-2">
-						<a href="javascript:void(0)">
-							<span class="glyphicon glyphicon-align-justify"></span>
-						</a>
+						<li>
+							<a href="javascript:void(0)">
+								<span class="glyphicon glyphicon-align-justify"></span>
+							</a>
+
+						</li>
+
 					</div>
 					<div class="nav-top-right col-lg-5 col-md-6 col-xs-11">
-						<a href="javascript:void(0)">
-							<span class="glyphicon glyphicon-envelope ">
+						<li>
+
+							<a href="javascript:void(0)">
+								<span class="glyphicon glyphicon-envelope ">
 							    <i class="bg-primary">3</i>
 						    </span>
-						    <ul class="warp">
-						    	<p>你有4条信息</p>
-						    	<li>1222222461165</li>
-						    	<li>2</li>
-						    	<p></p>
-						    </ul>
-						</a>
-						<a href="javascript:void(0)">
+
+							</a>
+							<ul class="warp ">
+								<li class="header">你有3条信息</li>
+								<li>
+									<ul class="menu">
+										<li>
+											<!-- start message -->
+
+											<div class="menu-left">
+												<img src="img/财神@2x.png" class=" img-circle" alt="User Image" width="40" height="40">
+											</div>
+											<div class="menu-right">
+												<h4 class="line">Support Team
+                                                    <small><i class="glyphicon glyphicon-time"></i> 5 mins</small>
+                                                </h4>
+												<p>Why not buy a new awesome theme?</p>
+											</div>
+
+										</li>
+										<!-- end message -->
+										<li>
+											<!-- start message -->
+
+											<div class="menu-left">
+												<img src="img/财神@2x.png" class=" img-circle" alt="User Image" width="40" height="40">
+											</div>
+											<div class="menu-right">
+												<h4 class="line">Support Team
+                                                    <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                                </h4>
+												<p>Why not buy a new awesome theme?</p>
+											</div>
+
+										</li>
+										<!-- end message -->
+										<li>
+											<!-- start message -->
+
+											<div class="menu-left">
+												<img src="img/财神@2x.png" class=" img-circle" alt="User Image" width="40" height="40">
+											</div>
+											<div class="menu-right">
+												<h6 class="line">Support Team
+                                                    <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                                </h4>
+												<p>Why not buy a new awesome theme?</p>
+											</div>
+
+										</li>
+										<!-- end message -->
+										<li>
+											<!-- start message -->
+
+											<div class="menu-left">
+												<img src="img/财神@2x.png" class=" img-circle" alt="User Image" width="40" height="40">
+											</div>
+											<div class="menu-right"> 
+												<h4 class="line">Support Team
+                                                    <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                                </h4>
+												<p>Why not buy a new awesome theme?</p>
+											</div>
+
+										</li>
+										<!-- end message -->
+										<li>
+											<!-- start message -->
+
+											<div class="menu-left">
+												<img src="img/财神@2x.png" class=" img-circle" alt="User Image" width="40" height="40">
+											</div>
+											<div class="menu-right"> 
+												<h4 class="line">Support Team
+                                                    <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                                </h4>
+												<p>Why not buy a new awesome theme?</p>
+											</div>
+
+										</li>
+										<!-- end message -->
+										<li>
+											<!-- start message -->
+
+											<div class="menu-left">
+												<img src="img/财神@2x.png" class=" img-circle" alt="User Image" width="40" height="40">
+											</div>
+											<div class="menu-right"> 
+												<h4 class="line">Support Team
+                                                    <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                                </h4>
+												<p>Why not buy a new awesome theme?</p>
+											</div>
+
+										</li>
+										<!-- end message -->
+										<li>
+											<!-- start message -->
+
+											<div class="menu-left">
+												<img src="img/财神@2x.png" class=" img-circle" alt="User Image" width="40" height="40">
+											</div>
+											<div class="menu-right"> 
+												<h4 class="line">Support Team
+                                                    <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                                </h4>
+												<p>Why not buy a new awesome theme?</p>
+											</div>
+
+										</li>
+										<!-- end message -->
+									</ul>
+									
+								</li>
+								<li class="footer">fg</li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:void(0)">
 							<span class="glyphicon glyphicon-bell">
 								<i class="bg-success label-success">1</i>
 							</span>
 						</a>
-						<a href="javascript:void(0)">
+						</li>
+						<li>
+							<a href="javascript:void(0)">
 							<span class="glyphicon glyphicon-flag">
 								<i class="bg-warning label-warning">2</i>
 							</span>
 						</a>
+						</li>
+						
 						<div class="user" style="height: 50px;margin-top: 10px;">
-							<a href="javascript:void(0)"><img class="portrait img-circle " src="img/财神@2x.png" height="30 " width="30">
-								<span class="name visible-lg visible-md " style="display:block">后台管理员 </span></a>
+							<a href="javascript:void(0)">
+								<img class="header-img portrait img-circle " src="img/财神@2x.png" height="30 " width="30">
+								<span class="name visible-lg visible-md " style="display:block">后台管理员 </span>
+							</a>
 						</div>
-						<a href="javascript:void(0)">
-							<span class="glyphicon glyphicon-cog">
+						<li>
+							<a  class="setting" href="javascript:void(0)">
+							    <span class="glyphicon glyphicon-cog">
 								
-							</span>
-						</a>
+							    </span>
+						    </a>
+							<ul class="setting-menu" style="width:230px">
+								<li class="setting-menu-left">
+									<span class=" set-img1 glyphicon glyphicon-wrench"> </span>
+									1
+								</li>
+								<li class="setting-menu-center">
+									<span class=" set-img1 glyphicon glyphicon-wrench"> </span>2
+								</li>
+								<li class="setting-menu-right">
+									<span class=" set-img1 glyphicon glyphicon-wrench"> </span>3
+								</li>
+							</ul>
+						</li>
+						
+						
 
 					</div>
 
