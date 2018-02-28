@@ -47,18 +47,74 @@
 			.menu>li>.menu-right {
 				font-size: 10px;
 			}
-			.setting-menu{
-				position:absolute;
+			
+			.setting-menu {
+				position: absolute;
 				right: 0px;
 				z-index: 1;
 				display: flex;
 				flex-flow: row nowrap;
-				
+				background: #181f23;
 				justify-content: space-between;
 			}
-			.setting-menu>li{
+			
+			.setting-menu>li {
 				text-align: center;
 				width: 100%;
+				height: 45px;
+			}
+			
+			.setting-menu>li:hover {
+				background: #222222;
+			}
+			
+			.set-img {
+				line-height: 45px;
+				color: #fff;
+				font-size: 20px;
+			}
+			
+			.setting-menu>div {
+				position: absolute;
+				top: 45px;
+				width: 100%;
+				height: 500px;
+				border: 1px solid red;
+				background: #222d32;
+			}
+			
+			.setting-menu>div>ul {
+				width: 100%;
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: space-around;
+			}
+			
+			.setting-menu>div>ul>li {
+				height: 40px;
+				width: 60px;
+				border: 1px solid #FFF;
+				color: white;
+				text-align: center;
+			}
+			
+			body {
+				moz-user-select: -moz-none;
+				-moz-user-select: none;
+				-o-user-select: none;
+				-khtml-user-select: none;
+				-webkit-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+			.info>p{
+				margin-top: 10px;
+				margin-bottom: 5px;
+				
+			}
+			.image {
+				padding-top: 10px;
+				margin-right: 10px;
 			}
 		</style>
 	</head>
@@ -237,17 +293,62 @@
 								
 							    </span>
 						    </a>
-							<ul class="setting-menu" style="width:230px">
+							<ul class="setting-menu " style="width:230px">
 								<li class="setting-menu-left">
-									<span class=" set-img1 glyphicon glyphicon-wrench"> </span>
+									<span class=" set-img glyphicon glyphicon-wrench"> </span>
 									1
 								</li>
 								<li class="setting-menu-center">
-									<span class=" set-img1 glyphicon glyphicon-wrench"> </span>2
+									<span class=" set-img glyphicon glyphicon-wrench"> </span>2
 								</li>
 								<li class="setting-menu-right">
-									<span class=" set-img1 glyphicon glyphicon-wrench"> </span>3
+									<span class=" set-img glyphicon glyphicon-wrench"> </span>3
 								</li>
+								<div class="setting-menu-top" style="z-index: 1;">
+									<p>皮肤</p>
+									<ul>
+										<li>
+											<div>
+												<span style="display:block; width: 20%; float: left; height: 7px; background: #367fa9"></span>
+											    <span  style="display:block; width: 80%; float: left; height: 7px;background: #3c8dbc;"></span>
+											</div>
+											<div>
+												<span style="display:block; width: 20%; float: left; height: 20px; background: #222d32"></span>
+												<span style="display:block; width: 80%; float: left; height: 20px; background: #f4f5f7"></span>
+											</div>
+											蓝色
+										</li>
+										<li>
+											<div>
+												<span style="display:block; width: 20%; float: left; height: 7px; background: #555299"></span>
+											    <span  style="display:block; width: 80%; float: left; height: 7px;background: #605ca8;"></span>
+											</div>
+											<div>
+												<span style="display:block; width: 20%; float: left; height: 20px; background: #222d32"></span>
+												<span style="display:block; width: 80%; float: left; height: 20px; background: #fff"></span>
+											</div>
+											紫色
+										</li>
+										<li>
+											
+										</li>
+										<li>
+											
+										</li>
+										<li>
+											
+										</li>
+										<li>
+											
+										</li>
+									</ul>
+								</div>
+								<div class="setting-menu-center">
+									
+								</div>
+								<div class="setting-menu-bottom">
+									
+								</div>
 							</ul>
 						</li>
 						
@@ -262,6 +363,22 @@
 			<div class="row">
 				<!--左侧导航条-->
 				<div class=" left-nav col-lg-2 col-md-2 visible-lg visible-md">
+					<div class="user-panel left-nav-people " style="height:80px">
+						<div class="pull-left image">
+							<img src="img/财神@2x.png" class="img-circle " height="40" width="40" />
+						</div>
+						<div class="pull-left info">
+							<p>管理员</p>
+							<a href="javascript:void(0)" style="display:inline-block;text-decoration: none;">
+								<i class=" text-success" style="display:inline-block;width:10px;height:10px;background:#1B6D85 ; border-radius: 50%;"></i>
+								在线
+							</a>
+						</div>
+						<form class="navbar-form container">
+                           <input class="col-lg-8" type="search" value="search..." />
+						</form>
+					</div>
+					
 					<ul class="nav nav-tabs nav-stacked ">
 						<li>
 							<a href='#'>Another Link 1</a>
