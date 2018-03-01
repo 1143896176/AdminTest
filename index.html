@@ -6,12 +6,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no">
 		<title></title>
 		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!--		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+-->
 		<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
 
 		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<!--		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+-->
+		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
+
+		<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--		<script src="bootstrap-3.3.7-dist/js/npm.js" type="text/javascript" charset="utf-8"></script>
+-->
 		<style type="text/css">
 			.nav-top-right>li>.warp {
 				width: 280px;
@@ -107,14 +115,76 @@
 				-ms-user-select: none;
 				user-select: none;
 			}
-			.info>p{
+			
+			.info>p {
 				margin-top: 10px;
 				margin-bottom: 5px;
-				
 			}
+			
 			.image {
 				padding-top: 10px;
 				margin-right: 10px;
+			}
+			
+			@media only screen and (min-width: 768px) {
+				.warp-header {
+					display: flex;
+					flex-flow: row;
+				}
+				.logo{
+					width: 230px;
+					min-width: 230px;
+					height: 100px;
+					
+				}
+				.logo>.row{
+					height: 100px;
+				}
+				.header-message {
+					width: 100%;
+					height: 100px;
+					
+				}
+				.c {
+					width: 230px;
+					min-width: 230px;
+					height: 300px;
+					
+					transform: translateX(0px);
+					transition: transform 0.2s;
+				}
+			}
+			
+			@media only screen and (min-width: 0px) and (max-width: 768px) {
+				.logo{
+					width: 100%;
+					height: 50px;
+					
+				}
+				.header-message {
+					width: 100%;
+					height: 50px;
+					
+				}
+				.logo>.row>img{
+					margin-top: 0;
+				}
+				.c {
+					width: 230px;
+					min-width: 230px;
+					height: 300px;
+					
+					transform: translateX(-230px);
+					transition: transform 0.2s;
+				}
+			}
+			
+			.warp2 {
+				overflow: hidden;
+			}
+			
+			* {
+				transition: all 1s;
 			}
 		</style>
 	</head>
@@ -123,76 +193,74 @@
 		<div class="container-fluid">
 			<!--头部导航条-->
 
-			<div class="row">
+			<div class="row warp-header">
 				<!--logo部分-->
-				<div class="logo col-md-2 col-sm-12">
-					<div class="row" style="height: 100px;">
+				<div class="a logo col-md-2 col-sm-12">
+					<div class="row" >
+						<!--style="height: 100px;"-->
 						<img class="img-responsive center-block" alt="logo" src="img/left_logo.png" />
 					</div>
 				</div>
 				<!--logo部分结束-->
 				<!--消息提示部分-->
-				<div class=" message col-md-10" style="height: 50px;border-bottom: 1px solid #222222;">
-					<div class="nav-top-left col-lg-2 col-md-3 col-xs-2">
-						<li>
-							<a href="javascript:void(0)">
-								<span class="glyphicon glyphicon-align-justify"></span>
-							</a>
-
-						</li>
-
-					</div>
-					<div class="nav-top-right col-lg-5 col-md-6 col-xs-11">
-						<li>
-
-							<a href="javascript:void(0)">
-								<span class="glyphicon glyphicon-envelope ">
+				<div class="header-message">
+					<div class="b message col-md-12" style="height: 50px;border-bottom: 1px solid #222222;">
+						<div class="nav-top-left col-lg-2 col-md-3 col-xs-2">
+							<li>
+								<a href="javascript:void(0)">
+									<span class="glyphicon glyphicon-align-justify"></span>
+								</a>
+							</li>
+						</div>
+						<div class="nav-top-right col-lg-5 col-md-6 col-xs-11">
+							<li>
+								<a href="javascript:void(0)">
+									<span class="glyphicon glyphicon-envelope ">
 							    <i class="bg-primary">3</i>
-						    </span>
+						   </span>
+								</a>
+								<ul class="warp ">
+									<li class="header">你有3条信息</li>
+									<li>
+										<ul class="menu">
+											<li>
+												<!-- start message -->
 
-							</a>
-							<ul class="warp ">
-								<li class="header">你有3条信息</li>
-								<li>
-									<ul class="menu">
-										<li>
-											<!-- start message -->
-
-											<div class="menu-left">
-												<img src="img/财神@2x.png" class=" img-circle" alt="User Image" width="40" height="40">
-											</div>
-											<div class="menu-right">
-												<h4 class="line">Support Team
+												<div class="menu-left">
+													<img src="img/财神@2x.png" class=" img-circle" alt="User Image" width="40" height="40">
+												</div>
+												<div class="menu-right">
+													<h4 class="line">Support Team
                                                     <small><i class="glyphicon glyphicon-time"></i> 5 mins</small>
                                                 </h4>
-												<p>Why not buy a new awesome theme?</p>
-											</div>
+													<p>Why not buy a new awesome theme?</p>
+												</div>
 
-										</li>
-										<!-- end message -->
-										<li>
-											<!-- start message -->
+											</li>
+											<!-- end message -->
+											<li>
+												<!-- start message -->
 
-											<div class="menu-left">
-												<img src="img/财神@2x.png" class=" img-circle" alt="User Image" width="40" height="40">
-											</div>
-											<div class="menu-right">
-												<h4 class="line">Support Team
+												<div class="menu-left">
+													<img src="img/财神@2x.png" class=" img-circle" alt="User Image" width="40" height="40">
+												</div>
+												<div class="menu-right">
+													<h4 class="line">Support Team
                                                     <small><i class="fa fa-clock-o"></i> 5 mins</small>
                                                 </h4>
-												<p>Why not buy a new awesome theme?</p>
-											</div>
+													<p>Why not buy a new awesome theme?</p>
+												</div>
 
-										</li>
-										<!-- end message -->
-										<li>
-											<!-- start message -->
+											</li>
+											<!-- end message -->
+											<li>
+												<!-- start message -->
 
-											<div class="menu-left">
-												<img src="img/财神@2x.png" class=" img-circle" alt="User Image" width="40" height="40">
-											</div>
-											<div class="menu-right">
-												<h6 class="line">Support Team
+												<div class="menu-left">
+													<img src="img/财神@2x.png" class=" img-circle" alt="User Image" width="40" height="40">
+												</div>
+												<div class="menu-right">
+													<h6 class="line">Support Team
                                                     <small><i class="fa fa-clock-o"></i> 5 mins</small>
                                                 </h4>
 												<p>Why not buy a new awesome theme?</p>
@@ -355,14 +423,17 @@
 						
 
 					</div>
-
+                    
 				</div>
+				<div class="message col-md-12 " style="height: 50px"></div>
+				</div>
+				
 				<!--消息提示部分结束-->
-				<div class="message col-md-10 " style="height: 50px; "></div>
+				
 			</div>
 			<div class="row">
 				<!--左侧导航条-->
-				<div class=" left-nav col-lg-2 col-md-2 visible-lg visible-md">
+				<!--<div class=" left-nav col-lg-2 col-md-2 visible-lg visible-md">
 					<div class="user-panel left-nav-people " style="height:80px">
 						<div class="pull-left image">
 							<img src="img/财神@2x.png" class="img-circle " height="40" width="40" />
@@ -399,7 +470,204 @@
 							<a href='#'>Another Link 6</a>
 						</li>
 					</ul>
-				</div>
+				</div>-->
+				
+				<section class="c sidebar col-lg-2 col-md-2 " style="height: auto;">
+			      <!-- Sidebar user panel -->
+			      <div class="user-panel clearfix ">
+			        <div class="pull-left image">
+			          <img src="img/财神@2x.png" class="img-circle" height="40" width="40" alt="User Image">
+			        </div>
+			        <div class="pull-left info">
+			          <p>Alexander Pierce</p>
+			          <a href="#"><i class=" text-success" style="display:inline-block;width:10px;height:10px;background:#1B6D85 ; border-radius: 50%;"></i> 在线</a>
+			        </div>
+			      </div>
+			      <!-- search form -->
+			      <form action="#" method="get" class="sidebar-form">
+			        <div class="input-group">
+			          <input type="text" name="q" class="form-control" placeholder="Search..." style="max-width: 200px;">
+			          <span class="input-group-btn">
+			                <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+			                  <i class="glyphicon glyphicon-search"></i>
+			                </button>
+			              </span>
+			        </div>
+			      </form>
+			      <!-- /.search form -->
+			      <!-- sidebar menu: : style can be found in sidebar.less -->
+			      <ul class="sidebar-menu tree" data-widget="tree">
+			        <li class="header">MAIN NAVIGATION</li>
+			        <li class="active treeview menu-open">
+			          <a href="#">
+			            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+			            <span class="pull-right-container">
+			              <i class="fa fa-angle-left pull-right"></i>
+			            </span>
+			          </a>
+			          <ul class="treeview-menu">
+			            <li><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
+			            <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+			          </ul>
+			        </li>
+			        <li class="treeview">
+			          <a href="#">
+			            <i class="fa fa-files-o"></i>
+			            <span>Layout Options</span>
+			            <span class="pull-right-container">
+			              <span class="label label-primary pull-right">4</span>
+			            </span>
+			          </a>
+			          <ul class="treeview-menu">
+			            <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
+			            <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
+			            <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
+			            <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
+			          </ul>
+			        </li>
+			        <li>
+			          <a href="pages/widgets.html">
+			            <i class="fa fa-th"></i> <span>Widgets</span>
+			            <span class="pull-right-container">
+			              <small class="label pull-right bg-green">new</small>
+			            </span>
+			          </a>
+			        </li>
+			        <li class="treeview">
+			          <a href="#">
+			            <i class="fa fa-pie-chart"></i>
+			            <span>Charts</span>
+			            <span class="pull-right-container">
+			              <i class="fa fa-angle-left pull-right"></i>
+			            </span>
+			          </a>
+			          <ul class="treeview-menu">
+			            <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
+			            <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
+			            <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
+			            <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
+			          </ul>
+			        </li>
+			        <li class="treeview">
+			          <a href="#">
+			            <i class="fa fa-laptop"></i>
+			            <span>UI Elements</span>
+			            <span class="pull-right-container">
+			              <i class="fa fa-angle-left pull-right"></i>
+			            </span>
+			          </a>
+			          <ul class="treeview-menu">
+			            <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
+			            <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
+			            <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
+			            <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
+			            <li><a href="pages/UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
+			            <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
+			          </ul>
+			        </li>
+			        <li class="treeview">
+			          <a href="#">
+			            <i class="fa fa-edit"></i> <span>Forms</span>
+			            <span class="pull-right-container">
+			              <i class="fa fa-angle-left pull-right"></i>
+			            </span>
+			          </a>
+			          <ul class="treeview-menu">
+			            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
+			            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
+			            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
+			          </ul>
+			        </li>
+			        <li class="treeview">
+			          <a href="#">
+			            <i class="fa fa-table"></i> <span>Tables</span>
+			            <span class="pull-right-container">
+			              <i class="fa fa-angle-left pull-right"></i>
+			            </span>
+			          </a>
+			          <ul class="treeview-menu">
+			            <li><a href="pages/tables/simple.html"><i class="fa fa-circle-o"></i> Simple tables</a></li>
+			            <li><a href="pages/tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
+			          </ul>
+			        </li>
+			        <li>
+			          <a href="pages/calendar.html">
+			            <i class="fa fa-calendar"></i> <span>Calendar</span>
+			            <span class="pull-right-container">
+			              <small class="label pull-right bg-red">3</small>
+			              <small class="label pull-right bg-blue">17</small>
+			            </span>
+			          </a>
+			        </li>
+			        <li>
+			          <a href="pages/mailbox/mailbox.html">
+			            <i class="fa fa-envelope"></i> <span>Mailbox</span>
+			            <span class="pull-right-container">
+			              <small class="label pull-right bg-yellow">12</small>
+			              <small class="label pull-right bg-green">16</small>
+			              <small class="label pull-right bg-red">5</small>
+			            </span>
+			          </a>
+			        </li>
+			        <li class="treeview">
+			          <a href="#">
+			            <i class="fa fa-folder"></i> <span>Examples</span>
+			            <span class="pull-right-container">
+			              <i class="fa fa-angle-left pull-right"></i>
+			            </span>
+			          </a>
+			          <ul class="treeview-menu">
+			            <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
+			            <li><a href="pages/examples/profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
+			            <li><a href="pages/examples/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
+			            <li><a href="pages/examples/register.html"><i class="fa fa-circle-o"></i> Register</a></li>
+			            <li><a href="pages/examples/lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
+			            <li><a href="pages/examples/404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
+			            <li><a href="pages/examples/500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
+			            <li><a href="pages/examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
+			            <li><a href="pages/examples/pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
+			          </ul>
+			        </li>
+			        <li class="treeview">
+			          <a href="#">
+			            <i class="fa fa-share"></i> <span>Multilevel</span>
+			            <span class="pull-right-container">
+			              <i class="fa fa-angle-left pull-right"></i>
+			            </span>
+			          </a>
+			          <ul class="treeview-menu">
+			            <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+			            <li class="treeview">
+			              <a href="#"><i class="fa fa-circle-o"></i> Level One
+			                <span class="pull-right-container">
+			                  <i class="fa fa-angle-left pull-right"></i>
+			                </span>
+			              </a>
+			              <ul class="treeview-menu">
+			                <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
+			                <li class="treeview">
+			                  <a href="#"><i class="fa fa-circle-o"></i> Level Two
+			                    <span class="pull-right-container">
+			                      <i class="fa fa-angle-left pull-right"></i>
+			                    </span>
+			                  </a>
+			                  <ul class="treeview-menu">
+			                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
+			                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
+			                  </ul>
+			                </li>
+			              </ul>
+			            </li>
+			            <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+			          </ul>
+			        </li>
+			        <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
+			        <li class="header">LABELS</li>
+			        <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
+			        <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
+			        <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+			      <li class="bg-green"><a href="https://themequarry.com"><i class="fa fa-star-o" style="color: rgb(255, 255, 255);"></i><span style="color: rgb(255, 255, 255);">Premium Templates</span></a></li></ul>
+			    </section>
 				<!--左侧导航条结束-->
 				<!--右侧内容-->
 				<div class="right-warp col-lg-10 col-md-10  " style="background:#000000;height: 100px;">

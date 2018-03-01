@@ -24,11 +24,11 @@ html {
 	margin-top: 1rem;
 }
 
-.container-fluid>.row>.message {
+.container-fluid>.row>.header-message>.message {
 	background: #3c8dbc;
 }
 
-.container-fluid>.row>.message {
+.container-fluid>.row>.header-message>.message {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
